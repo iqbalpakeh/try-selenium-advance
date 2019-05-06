@@ -8,6 +8,7 @@
 	<name>Advanced Selenium Webdriver</name>
 
 	<dependencies>
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -23,6 +24,19 @@
 			<version>3.14.0</version>
 		</dependency>
 
+		<!-- https://logging.apache.org/log4j/2.x/maven-artifacts.html -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+
+		<!-- https://logging.apache.org/log4j/2.x/maven-artifacts.html -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.2</version>
+		</dependency>
 
 	</dependencies>
 
