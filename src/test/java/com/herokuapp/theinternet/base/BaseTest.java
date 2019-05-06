@@ -15,9 +15,9 @@ public class BaseTest {
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setUp(@Optional("chrome") String browser) {
+
         // Create driver
         System.out.println("Create driver: " + browser);
-
         switch (browser) {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
@@ -35,6 +35,8 @@ public class BaseTest {
                 driver = new ChromeDriver();
                 break;
         }
+
+        // Maximize window
         driver.manage().window().maximize();
     }
 
