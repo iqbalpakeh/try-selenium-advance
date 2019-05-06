@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet;
+package com.herokuapp.theinternet.loginpagetest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,10 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PositiveTests {
+public class PositiveLoginTests {
 
     @Test
-    public void logInTest() {
+    public void positiveLoginTest() {
         System.out.println("Starting logIn test");
 
         // Create driver

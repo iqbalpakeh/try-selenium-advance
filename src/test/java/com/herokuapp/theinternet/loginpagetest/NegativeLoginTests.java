@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet;
+package com.herokuapp.theinternet.loginpagetest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +11,9 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class NegativeTests {
+public class NegativeLoginTests {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @Parameters({"browser"})
     @BeforeMethod
@@ -44,8 +44,8 @@ public class NegativeTests {
 
     @Parameters({"username", "password", "expectedMessage"})
     @Test(priority = 1)
-    public void negativeTest(String username, String password, String expectedErrorMessage) {
-        System.out.println("Starting negativeTest");
+    public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
+        System.out.println("Starting negativeLoginTest");
 
         // open main page
         String url = "http://the-internet.herokuapp.com/";
