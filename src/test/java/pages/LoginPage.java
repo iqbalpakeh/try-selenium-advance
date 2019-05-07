@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage extends BasePage {
 
     private By usernameLocator = By.id("username");
-    private By passwordLocator = By.id("password");
-    private By loginButtonLocator = By.id("button");
+    private By passwordLocator = By.name("password");
+    private By loginButtonLocator = By.tagName("button");
 
     public LoginPage(WebDriver driver, Logger log) {
         super(driver, log);
