@@ -60,6 +60,15 @@ public class BasePage {
     }
 
     /**
+     * Get URL of current page from browser
+     *
+     * @return page URL
+     */
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
+    /**
      * Wait for given number of seconds for element with given locator to be visible on the page
      *
      * @param locator of web element
