@@ -10,7 +10,12 @@ public class AlertsTests extends TestUtilities {
 
     @Test
     public void jsAlertTest() {
+
         log.info("Starting jsAlertTest");
+
+        //---------------------------------------------------------------
+        // EXECUTION
+        //---------------------------------------------------------------
 
         // open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
@@ -32,7 +37,11 @@ public class AlertsTests extends TestUtilities {
         // Get Results text
         String result = alertsPage.getResultText();
         sleep(1000);
-        // Verifications
+
+        //---------------------------------------------------------------
+        // VERIFICATIONS
+        //---------------------------------------------------------------
+
         // 1 - Alert text is expected
         Assert.assertTrue(alertMessage.equals("I am a JS Alert"),
                 "Alert message is not expected. \nShould be 'I am a JS Alert', but it is '" + alertMessage + "'");
@@ -44,7 +53,12 @@ public class AlertsTests extends TestUtilities {
 
     @Test
     public void jsDismissTest() {
+
         log.info("Starting jsDismissTest");
+
+        //---------------------------------------------------------------
+        // EXECUTION
+        //---------------------------------------------------------------
 
         // open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
@@ -65,7 +79,11 @@ public class AlertsTests extends TestUtilities {
         // Get Results text
         String result = alertsPage.getResultText();
         sleep(1000);
-        // Verifications
+
+        //---------------------------------------------------------------
+        // VERIFICATIONS
+        //---------------------------------------------------------------
+
         // 1 - Alert text is expected
         Assert.assertTrue(alertMessage.equals("I am a JS Confirm"),
                 "Alert message is not expected. \nShould be 'I am a JS Confirm', but it is '" + alertMessage + "'");
@@ -77,7 +95,12 @@ public class AlertsTests extends TestUtilities {
 
     @Test
     public void jsPromptTest() {
+
         log.info("Starting jsDismissTest");
+
+        //---------------------------------------------------------------
+        // EXECUTION
+        //---------------------------------------------------------------
 
         // open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
@@ -98,7 +121,11 @@ public class AlertsTests extends TestUtilities {
         // Get Results text
         String result = alertsPage.getResultText();
         sleep(1000);
-        // Verifications
+
+        //---------------------------------------------------------------
+        // VERIFICATIONS
+        //---------------------------------------------------------------
+
         // 1 - Alert text is expected
         Assert.assertTrue(alertMessage.equals("I am a JS prompt"),
                 "Alert message is not expected. \nShould be 'I am a JS prompt', but it is '" + alertMessage + "'");

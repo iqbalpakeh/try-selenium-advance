@@ -51,7 +51,7 @@ public class WelcomePage extends BasePageObject {
     /**
      * Click dropdown page by clicking Dropdown Link
      *
-     * @return
+     * @return Drop down page
      */
     public DropdownPage clickDropdownLink() {
         log.info("Clicking Dropdown link on Welcome Page");
