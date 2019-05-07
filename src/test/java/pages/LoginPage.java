@@ -4,18 +4,14 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
-
-    private WebDriver driver;
-    private Logger log;
+public class LoginPage extends BasePage {
 
     private By usernameLocator = By.id("username");
     private By passwordLocator = By.id("password");
     private By loginButtonLocator = By.id("button");
 
     public LoginPage(WebDriver driver, Logger log) {
-        this.driver = driver;
-        this.log = log;
+        super(driver, log);
     }
 
     /**
