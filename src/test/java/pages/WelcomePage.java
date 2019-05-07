@@ -19,7 +19,7 @@ public class WelcomePage extends BasePage {
      */
     public void openPage() {
        log.info("Opening page: " + pageUrl);
-       driver.get(pageUrl);
+       openUrl(pageUrl);
        log.info("Page opened!");
     }
 
@@ -30,7 +30,7 @@ public class WelcomePage extends BasePage {
      */
     public LoginPage clickFormAuthenticationLink() {
         log.info("Clicking form authentication link on welcome page");
-        driver.findElement(formAuthenticationLinkLocator).click();
+        click(formAuthenticationLinkLocator);
         return new LoginPage(driver, log);
     }
 
