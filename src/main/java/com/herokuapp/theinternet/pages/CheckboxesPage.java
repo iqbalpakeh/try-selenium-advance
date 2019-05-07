@@ -1,4 +1,4 @@
-package com.heroku.theinternet.pages;
+package com.herokuapp.theinternet.pages;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class CheckboxesPageObject extends BasePageObject {
+public class CheckboxesPage extends BasePageObject {
 
     private By checkbox = By.xpath("//input[@type='checkbox']");
 
-    public CheckboxesPageObject(WebDriver driver, Logger log) {
+    public CheckboxesPage(WebDriver driver, Logger log) {
         super(driver, log);
     }
 

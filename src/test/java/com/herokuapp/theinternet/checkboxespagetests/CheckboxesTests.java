@@ -1,8 +1,8 @@
 package com.herokuapp.theinternet.checkboxespagetests;
 
-import com.heroku.theinternet.base.TestUtilities;
-import com.heroku.theinternet.pages.CheckboxesPageObject;
-import com.heroku.theinternet.pages.WelcomePageObject;
+import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.CheckboxesPage;
+import com.herokuapp.theinternet.pages.WelcomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,11 +18,11 @@ public class CheckboxesTests extends TestUtilities {
         //---------------------------------------------------------------
 
         // Open main page
-        WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+        WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
         // Click on Checkboxes link
-        CheckboxesPageObject checkboxesPage = welcomePage.clickCheckboxesLink();
+        CheckboxesPage checkboxesPage = welcomePage.clickCheckboxesLink();
 
         // Select all Checkboxes
         checkboxesPage.selectAllCheckboxes();

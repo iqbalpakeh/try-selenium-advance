@@ -1,18 +1,19 @@
-package com.heroku.theinternet.pages;
+package com.herokuapp.theinternet.pages;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class WelcomePageObject extends BasePageObject {
+public class WelcomePage extends BasePageObject {
 
     private String pageUrl = "http://the-internet.herokuapp.com/";
 
     private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
     private By checkboxesLinkLocator = By.linkText("Checkboxes");
     private By dropdownLinkLocator = By.linkText("Dropdown");
+    private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 
-    public WelcomePageObject(WebDriver driver, Logger log) {
+    public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
     }
 
@@ -30,10 +31,10 @@ public class WelcomePageObject extends BasePageObject {
      *
      * @return Login Page
      */
-    public LoginPageObject clickFormAuthenticationLink() {
+    public LoginPage clickFormAuthenticationLink() {
         log.info("Clicking form authentication link on welcome page");
         click(formAuthenticationLinkLocator);
-        return new LoginPageObject(driver, log);
+        return new LoginPage(driver, log);
     }
 
     /**
@@ -41,10 +42,10 @@ public class WelcomePageObject extends BasePageObject {
      *
      * @return Checkboxes page
      */
-    public CheckboxesPageObject clickCheckboxesLink() {
+    public CheckboxesPage clickCheckboxesLink() {
         log.info("Clicking checkboxes link on Welcome Page");
         click(checkboxesLinkLocator);
-        return new CheckboxesPageObject(driver, log);
+        return new CheckboxesPage(driver, log);
     }
 
     /**
@@ -52,10 +53,21 @@ public class WelcomePageObject extends BasePageObject {
      *
      * @return
      */
-    public DropdownPageObject clickDropdownLink() {
+    public DropdownPage clickDropdownLink() {
         log.info("Clicking Dropdown link on Welcome Page");
         click(dropdownLinkLocator);
-        return new DropdownPageObject(driver, log);
+        return new DropdownPage(driver, log);
+    }
+
+    /**
+     * Click alert page by clicking alert link
+     *
+     * @return alert page
+     */
+    public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
+        log.info("Clicking JavaScript Alerts link on Welcome Page");
+        click(javaScriptAlertsLinkLocator);
+        return new JavaScriptAlertsPage(driver, log);
     }
 
 }

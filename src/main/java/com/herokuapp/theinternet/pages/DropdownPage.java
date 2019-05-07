@@ -1,4 +1,4 @@
-package com.heroku.theinternet.pages;
+package com.herokuapp.theinternet.pages;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class DropdownPageObject extends BasePageObject {
+public class DropdownPage extends BasePageObject {
 
     private By dropdown = By.id("dropdown");
 
-    public DropdownPageObject(WebDriver driver, Logger log) {
+    public DropdownPage(WebDriver driver, Logger log) {
         super(driver, log);
     }
 
