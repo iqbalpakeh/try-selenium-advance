@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet.loginpagetest;
+package com.herokuapp.theinternet.loginpagetests;
 
 import com.heroku.theinternet.base.TestUtilities;
 import org.testng.Assert;
