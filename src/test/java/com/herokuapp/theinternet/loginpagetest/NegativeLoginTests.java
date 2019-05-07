@@ -1,11 +1,11 @@
 package com.herokuapp.theinternet.loginpagetest;
 
-import com.herokuapp.theinternet.base.TestUtilities;
+import com.heroku.theinternet.base.TestUtilities;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pages.LoginPageObject;
-import pages.WelcomePageObject;
+import com.heroku.theinternet.pages.LoginPageObject;
+import com.heroku.theinternet.pages.WelcomePageObject;
 
 public class NegativeLoginTests extends TestUtilities {
 
@@ -19,17 +19,17 @@ public class NegativeLoginTests extends TestUtilities {
         // EXECUTION
         //---------------------------------------------------------------
 
-        WelcomePageObject welcomePageObject = new WelcomePageObject(driver, log);
-        welcomePageObject.openPage();
-        LoginPageObject loginPageObject = welcomePageObject.clickFormAuthenticationLink();
-        loginPageObject.negativeLogin(username, password);
+        WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+        welcomePage.openPage();
+        LoginPageObject loginPage = welcomePage.clickFormAuthenticationLink();
+        loginPage.negativeLogin(username, password);
 
         //---------------------------------------------------------------
         // VERIFICATIONS
         //---------------------------------------------------------------
 
-        loginPageObject.waitForErrorMessage();
-        String actualErrorMessage = loginPageObject.getErrorMessageText();
+        loginPage.waitForErrorMessage();
+        String actualErrorMessage = loginPage.getErrorMessageText();
         Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),
                 "actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: "
                         + expectedErrorMessage + "\nactualErrorMessage: " + actualErrorMessage);

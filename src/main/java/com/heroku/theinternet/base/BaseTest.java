@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet.base;
+package com.heroku.theinternet.base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

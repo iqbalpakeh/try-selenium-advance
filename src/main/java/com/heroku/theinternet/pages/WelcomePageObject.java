@@ -1,4 +1,4 @@
-package pages;
+package com.heroku.theinternet.pages;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;

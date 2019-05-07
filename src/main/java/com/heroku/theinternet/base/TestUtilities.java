@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet.base;
+package com.heroku.theinternet.base;
 
 public class TestUtilities extends BaseTest {
 

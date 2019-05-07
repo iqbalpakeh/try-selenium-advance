@@ -1,11 +1,11 @@
 package com.herokuapp.theinternet.loginpagetest;
 
-import com.herokuapp.theinternet.base.TestUtilities;
+import com.heroku.theinternet.base.TestUtilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.LoginPageObject;
-import pages.SecureAreaPageObject;
-import pages.WelcomePageObject;
+import com.heroku.theinternet.pages.LoginPageObject;
+import com.heroku.theinternet.pages.SecureAreaPageObject;
+import com.heroku.theinternet.pages.WelcomePageObject;
 
 public class PositiveLoginTests extends TestUtilities {
 
@@ -18,24 +18,24 @@ public class PositiveLoginTests extends TestUtilities {
         // EXECUTION
         //---------------------------------------------------------------
 
-        WelcomePageObject welcomePageObject = new WelcomePageObject(driver, log);
-        welcomePageObject.openPage();
-        LoginPageObject loginPageObject = welcomePageObject.clickFormAuthenticationLink();
-        SecureAreaPageObject secureAreaPageObject = loginPageObject.login("tomsmith", "SuperSecretPassword!");
+        WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+        welcomePage.openPage();
+        LoginPageObject loginPage = welcomePage.clickFormAuthenticationLink();
+        SecureAreaPageObject secureAreaPage = loginPage.login("tomsmith", "SuperSecretPassword!");
 
         //---------------------------------------------------------------
         // VERIFICATIONS
         //---------------------------------------------------------------
 
         // Check new url
-        Assert.assertEquals(secureAreaPageObject.getCurrentUrl(), secureAreaPageObject.getPageUrl());
+        Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
 
         // Check if logout button visible
-        Assert.assertTrue(secureAreaPageObject.isLogoutButtonVisible(), "logOutButton is not visible.");
+        Assert.assertTrue(secureAreaPage.isLogoutButtonVisible(), "logOutButton is not visible.");
 
         // Check successful login message
         String expectedSuccessMessage = "You logged into a secure area!";
-        String actualSuccessMessage = secureAreaPageObject.getSuccessMessageText();
+        String actualSuccessMessage = secureAreaPage.getSuccessMessageText();
         Assert.assertTrue(actualSuccessMessage.contains(expectedSuccessMessage),
                 "actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
                         + expectedSuccessMessage + "\nactualSuccessMessage: " + actualSuccessMessage);
