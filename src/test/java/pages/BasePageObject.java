@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage {
+public class BasePageObject {
 
     protected WebDriver driver;
     protected Logger log;
 
-    public BasePage(WebDriver driver, Logger log) {
+    public BasePageObject(WebDriver driver, Logger log) {
         this.driver = driver;
         this.log = log;
     }

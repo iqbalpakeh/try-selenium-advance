@@ -1,10 +1,11 @@
 package com.herokuapp.theinternet.loginpagetest;
 
 import com.herokuapp.theinternet.base.TestUtilities;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pages.LoginPageObject;
+import pages.WelcomePageObject;
 
 public class NegativeLoginTests extends TestUtilities {
 
@@ -14,23 +15,21 @@ public class NegativeLoginTests extends TestUtilities {
 
         log.info("Starting negativeLoginTest");
 
-        // open main page
-        String url = "http://the-internet.herokuapp.com/";
-        driver.get(url);
-        log.info("Main page is opened.");
+        //---------------------------------------------------------------
+        // EXECUTION
+        //---------------------------------------------------------------
 
-        // Click on Form Authentication link
-        driver.findElement(By.linkText("Form Authentication")).click();
+        WelcomePageObject welcomePageObject = new WelcomePageObject(driver, log);
+        welcomePageObject.openPage();
+        LoginPageObject loginPageObject = welcomePageObject.clickFormAuthenticationLink();
+        loginPageObject.negativeLogin(username, password);
 
-        // enter username and password
-        driver.findElement(By.id("username")).sendKeys(username);
-        driver.findElement(By.id("password")).sendKeys(password);
+        //---------------------------------------------------------------
+        // VERIFICATIONS
+        //---------------------------------------------------------------
 
-        // push log in button
-        driver.findElement(By.className("radius")).click();
-
-        // Verification
-        String actualErrorMessage = driver.findElement(By.id("flash")).getText();
+        loginPageObject.waitForErrorMessage();
+        String actualErrorMessage = loginPageObject.getErrorMessageText();
         Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),
                 "actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: "
                         + expectedErrorMessage + "\nactualErrorMessage: " + actualErrorMessage);

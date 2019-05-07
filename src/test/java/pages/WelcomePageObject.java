@@ -4,13 +4,13 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class WelcomePage extends BasePage {
+public class WelcomePageObject extends BasePageObject {
 
     private String pageUrl = "http://the-internet.herokuapp.com/";
 
     private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
 
-    public WelcomePage(WebDriver driver, Logger log) {
+    public WelcomePageObject(WebDriver driver, Logger log) {
         super(driver, log);
     }
 
@@ -28,10 +28,10 @@ public class WelcomePage extends BasePage {
      *
      * @return Login Page
      */
-    public LoginPage clickFormAuthenticationLink() {
+    public LoginPageObject clickFormAuthenticationLink() {
         log.info("Clicking form authentication link on welcome page");
         click(formAuthenticationLinkLocator);
-        return new LoginPage(driver, log);
+        return new LoginPageObject(driver, log);
     }
 
 }
