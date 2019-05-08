@@ -49,4 +49,11 @@
         </classes>
     </test>
 
+    <test name="WindowsTests">
+        <classes>
+            <class name="com.herokuapp.theinternet.windowstests.WindowsTests" />
+        </classes>
+    </test>
+
+
 </suite>

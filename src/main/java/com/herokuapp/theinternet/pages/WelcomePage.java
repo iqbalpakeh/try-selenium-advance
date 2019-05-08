@@ -12,6 +12,7 @@ public class WelcomePage extends BasePageObject {
     private By checkboxesLinkLocator = By.linkText("Checkboxes");
     private By dropdownLinkLocator = By.linkText("Dropdown");
     private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
+    private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -68,6 +69,17 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking JavaScript Alerts link on Welcome Page");
         click(javaScriptAlertsLinkLocator);
         return new JavaScriptAlertsPage(driver, log);
+    }
+
+    /**
+     * Clicking Multiple Windows link on Welcome Page
+     *
+     * @return multiple windows handler
+     */
+    public WindowsPage clickMultipleWindowsLink() {
+        log.info("Clicking Multiple Windows link on Welcome Page");
+        click(multipleWindowsLinkLocator);
+        return new WindowsPage(driver, log);
     }
 
 }
