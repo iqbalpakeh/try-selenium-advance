@@ -45,41 +45,47 @@
 
     <test name="AlertsTests">
         <classes>
-            <class name="com.herokuapp.theinternet.alertstests.AlertsTests" />
+            <class name="com.herokuapp.theinternet.alertstests.AlertsTests"/>
         </classes>
     </test>
 
     <test name="WindowsTests">
         <classes>
-            <class name="com.herokuapp.theinternet.windowstests.WindowsTests" />
+            <class name="com.herokuapp.theinternet.windowstests.WindowsTests"/>
         </classes>
     </test>
 
     <test name="EditorTests">
         <classes>
-            <class name="com.herokuapp.theinternet.editortests.EditorTests" />
+            <class name="com.herokuapp.theinternet.editortests.EditorTests"/>
         </classes>
     </test>
 
     <test name="KeyPressesTests-CH">
-        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.herokuapp.theinternet.keypressestests.KeyPressesTests">
                 <methods>
-                    <include name="pressKeyWithActionsTest"></include>
+                    <include name="pressKeyWithActionsTest"/>
                 </methods>
             </class>
         </classes>
     </test>
 
     <test name="KeyPressesTests-FF">
-        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.herokuapp.theinternet.keypressestests.KeyPressesTests" >
+            <class name="com.herokuapp.theinternet.keypressestests.KeyPressesTests">
                 <methods>
-                    <exclude name="pressKeyTest"></exclude>
+                    <exclude name="pressKeyTest"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+
+    <test name="UploadTests">
+        <classes>
+            <class name="com.herokuapp.theinternet.uploadtests.UploadTests" />
         </classes>
     </test>
 
