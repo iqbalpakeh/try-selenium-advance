@@ -89,4 +89,19 @@
         </classes>
     </test>
 
+    <test name="HorizontalSliderTests-CH">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.horizontalslidertests.HorizontalSliderTests" />
+        </classes>
+    </test>
+
+    <test name="HorizontalSliderTests-FF">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.horizontalslidertests.HorizontalSliderTests" />
+        </classes>
+    </test>
+
+
 </suite>
