@@ -230,4 +230,14 @@ public class BasePageObject {
                 find(from), find(to));
     }
 
+    /**
+     * Perform mouse hover over element
+     *
+     * @param element web element
+     */
+    protected void hoverOverElement(WebElement element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(element).build().perform();
+    }
+
 }
