@@ -22,8 +22,6 @@ public class NegativeLoginTests extends TestUtilities {
 
         log.info("Starting negativeLoginTest # " + no + " for " + description);
 
-        log.debug("username = " + username + ", password = " + password);
-
         //---------------------------------------------------------------
         // EXECUTION
         //---------------------------------------------------------------
