@@ -1,17 +1,16 @@
 package com.herokuapp.theinternet.uploadtests;
 
+import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.FileUploaderPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.TestUtilities;
-import com.herokuapp.theinternet.pages.FileUploaderPage;
-
 public class UploadTests extends TestUtilities {
 
-    @Test
-    public void imageUploadTest() {
+    @Test(dataProvider = "files")
+    public void fileUploadTest(int no, String fileName) {
 
-        log.info("Starting imageUploadTest");
+        log.info("Starting fileUploadTest #" + no + " for " + fileName);
 
         //---------------------------------------------------------------
         // EXECUTION
@@ -22,7 +21,6 @@ public class UploadTests extends TestUtilities {
         fileUploaderPage.openPage();
 
         // Select file
-        String fileName = "logo.png";
         fileUploaderPage.selectFile(fileName);
 
         // Push upload button
