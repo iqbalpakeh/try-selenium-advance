@@ -78,7 +78,7 @@
 						<!--
 						<suiteXmlFile>src/test/resources/TestSuites/FullUITestSuite.xml</suiteXmlFile>
 						-->
-						<suiteXmlFile>src/test/resources/TestSuites/SeparateTestSuites/NegativeLoginTestSuite.xml
+						<suiteXmlFile>src/test/resources/TestSuites/SeparateTestSuites/AlertsTestSuite.xml
 						</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
