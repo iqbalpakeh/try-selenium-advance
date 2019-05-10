@@ -240,4 +240,26 @@ public class BasePageObject {
         action.moveToElement(element).build().perform();
     }
 
+    /**
+     * Add cookie
+     *
+     * @param ck cookie to add
+     */
+    public void setCookie(Cookie ck) {
+        log.info("Adding cookie " + ck.getName());
+        driver.manage().addCookie(ck);
+        log.info("Cookie added");
+    }
+
+    /**
+     * Get cookie value using cookie name
+     *
+     * @param name cookie name
+     */
+    public String getCookie(String name) {
+        log.info("Getting value of cookie " + name);
+        return driver.manage().getCookieNamed(name).getValue();
+    }
+
+
 }
