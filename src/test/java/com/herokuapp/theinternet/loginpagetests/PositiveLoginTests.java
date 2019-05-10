@@ -1,11 +1,11 @@
 package com.herokuapp.theinternet.loginpagetests;
 
 import com.herokuapp.theinternet.base.TestUtilities;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import com.herokuapp.theinternet.pages.LoginPage;
 import com.herokuapp.theinternet.pages.SecureAreaPage;
 import com.herokuapp.theinternet.pages.WelcomePage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class PositiveLoginTests extends TestUtilities {
 
@@ -20,8 +20,13 @@ public class PositiveLoginTests extends TestUtilities {
 
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
+        takeScreenshot("WelcomePage opened");
+
         LoginPage loginPage = welcomePage.clickFormAuthenticationLink();
+        takeScreenshot("LoginPage opened");
+
         SecureAreaPage secureAreaPage = loginPage.login("tomsmith", "SuperSecretPassword!");
+        takeScreenshot("SecuredPage opened");
 
         //---------------------------------------------------------------
         // VERIFICATIONS
